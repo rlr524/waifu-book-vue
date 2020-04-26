@@ -1,4 +1,5 @@
 <template>
+  <!-- TODO: [WAIF-8] Make the navbar responsive with TW -->
   <nav class="header flex mb-4 items-center h-32">
     <div class="flex items-center w-1/3">
       <img
@@ -43,4 +44,10 @@
 export default {};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@media (max-width: 500px) {
+  .header__title {
+    visibility: hidden;
+  }
+}
+</style>
