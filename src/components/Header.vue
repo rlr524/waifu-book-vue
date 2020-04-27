@@ -16,13 +16,16 @@
             type="text"
             placeholder="Search"
             aria-label="Search"
-            class="w-full"
+            class="w-full h-8"
           />
         </div>
       </form>
     </div>
     <div class="flex w-1/3">
       <div class="header__links text-xl lg:flex-grow flex justify-end">
+        <div class="menu-btn">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
         <a
           href="/"
           class="block mt-4 lg:inline-block lg:mt-0 hover:shadow-inner mr-4"
@@ -45,9 +48,23 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 500px) {
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  display: none;
+}
+
+@media (max-width: 1023px) {
   .header__title {
     visibility: hidden;
+  }
+  .menu-btn {
+    display: block;
+  }
+
+  .menu-btn:hover {
+    opacity: 0.5;
   }
 }
 </style>
