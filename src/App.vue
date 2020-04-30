@@ -1,16 +1,19 @@
 <template>
   <div id="app" class="container">
     <Header />
+    <WaifuDay />
   </div>
 </template>
 
 <script>
 import Header from "./components/Header";
+import WaifuDay from "@/components/WaifuDay.vue";
 
 export default {
   name: "App",
   components: {
-    Header
+    Header,
+    WaifuDay
   }
 };
 </script>
@@ -21,12 +24,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin: 60px auto;
+  margin: 2rem auto;
 }
 
 @media (max-width: 700px) {
   #app {
-    margin: 0;
+    margin: 0 auto;
   }
 }
 </style>
