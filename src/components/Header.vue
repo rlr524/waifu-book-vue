@@ -1,9 +1,6 @@
 <template>
   <!-- TODO: [WAIF-8] Make the navbar responsive with TW -->
   <nav class="header flex mb-4 items-center h-32 -bg-color-main">
-    <div class="menu-hamburger-responsive">
-      <i class="fas fa-bars fa-2x lg:hidden cursor-pointer static"></i>
-    </div>
     <div class="flex items-center w-1/3">
       <img
         src="./img/site-logo-192x192.png"
@@ -16,35 +13,40 @@
         WaifuBook
       </span>
     </div>
-    <div class="flex w-1/3">
-      <form action="" class="w-full">
+    <div class="flex sm:w-1/2">
+      <form action="" class="md:w-full">
         <div class="">
           <input
             type="text"
             placeholder="Search"
             aria-label="Search"
-            class="w-full h-8"
+            class="h-8 md:w-full"
           />
         </div>
       </form>
     </div>
     <div class="flex w-1/3">
       <div
-        class="header-links -font-family-main text-white text-xl lg:flex-grow lg:flex lg:justify-end hidden"
+        class="header-links -font-family-main text-white text-xl sm:flex-grow sm:flex sm:justify-end hidden"
       >
         <a
           href="/"
-          class="block mt-4 lg:inline-block lg:mt-0 hover:shadow-inner mr-4"
+          class="block mt-4 sm:inline-block sm:mt-0 hover:shadow-inner mr-4"
         >
           Home
         </a>
         <a
           href="/login"
-          class="block mt-4 lg:inline-block lg:mt-0 hover:shadow-inner mr-4"
+          class="block mt-4 sm:inline-block sm:mt-0 hover:shadow-inner mr-4"
         >
           Login
         </a>
       </div>
+    </div>
+    <div class="menu-vertical-responsive">
+      <i class="material-icons mt-2 md-light sm:hidden cursor-pointer static">
+        more_vert
+      </i>
     </div>
   </nav>
 </template>
@@ -53,4 +55,8 @@
 export default {};
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+</style>
