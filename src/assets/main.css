@@ -8,23 +8,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-/* color palette:
-main orange: ff971d,
-light orange: ffe8d6,
-orange off white: f9f6f7,
-white: ffffff */
-
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* custom global styles */
-.-bg-color-main {
-  background-color: #FF971D;
-}
-.-bg-color-off-orange {
-  background-color: #F9F6F7;
 }
 
 /* Sections
@@ -593,6 +579,7 @@ iframe,
 embed,
 object {
   display: block;
+  vertical-align: middle;
 }
 
 /**
