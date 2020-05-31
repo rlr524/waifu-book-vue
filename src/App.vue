@@ -35,6 +35,7 @@ orange off white: f9f6f7,
 white: ffffff */
 
 #app {
+  font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -48,6 +49,9 @@ white: ffffff */
 }
 .-bg-color-off-orange {
   background-color: #f9f6f7;
+}
+.-font-bold {
+  font-weight: 700;
 }
 
 @media (max-width: 700px) {

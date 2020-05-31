@@ -8,9 +8,9 @@
         class="h-16 w-16 ml-4 mr-2"
       />
       <span
-        class="header-title -font-family-main text-white text-3xl font-bold lg:flex-grow lg:flex hidden"
+        class="header-title text-white text-3xl -font-bold lg:flex-grow lg:flex hidden"
       >
-        WaifuBook
+        Waifu-chan
       </span>
     </div>
     <div class="flex sm:w-1/2">
@@ -27,7 +27,7 @@
     </div>
     <div class="flex w-1/3">
       <div
-        class="header-links -font-family-main text-white text-xl sm:flex-grow sm:flex sm:justify-end hidden"
+        class="header-links text-white text-xl sm:flex-grow sm:flex sm:justify-end hidden"
       >
         <a
           href="/"
