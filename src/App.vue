@@ -10,9 +10,9 @@
 
 <script>
 import Header from "@/components/Header";
-import MyWaifus from "@/components/MyWaifus.vue";
-import WaifuDay from "@/components/WaifuDay.vue";
-import WaifuTop from "@/components/WaifuTop.vue";
+import MyWaifus from "@/views/MyWaifus.vue";
+import WaifuDay from "@/views/WaifuDay.vue";
+import WaifuTop from "@/views/WaifuTop.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {

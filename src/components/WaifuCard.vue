@@ -1,10 +1,10 @@
 <template>
-  <div class="my-waifu w-full h-64 mb-4 -bg-color-off-orange">My Waifus</div>
+  <div>This is a waifu card</div>
 </template>
 
 <script>
 export default {
-  name: "MyWaifus"
+  name: "WaifuCard"
 };
 </script>
 
