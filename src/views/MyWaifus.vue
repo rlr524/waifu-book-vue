@@ -1,6 +1,5 @@
 <template>
-  <div class="my-waifu w-full h-64 mb-4 -bg-color-off-orange">
-    My Waifus
+  <div class="my-waifu w-full -group-height p-2 mb-4 -bg-color-off-orange">
     <WaifuCard />
   </div>
 </template>

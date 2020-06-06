@@ -38,6 +38,7 @@ white: ffffff */
   font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f6f7;
   text-align: center;
   color: #2c3e50;
   margin: 2rem auto;
@@ -52,6 +53,9 @@ white: ffffff */
 }
 .-font-bold {
   font-weight: 700;
+}
+.-group-height {
+  height: 24rem;
 }
 
 @media (max-width: 700px) {
