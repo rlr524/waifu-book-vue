@@ -1,5 +1,5 @@
 <template>
-  <div class="waifu-top w-full h-64 mb-4 -bg-color-off-orange">
+  <div class="waifu-top w-full h-64 mb-4">
     Top 7 Waifus
   </div>
 </template>

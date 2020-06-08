@@ -1,5 +1,5 @@
 <template>
-  <div class="waifu-day w-full h-64 mb-4 -bg-color-off-orange">
+  <div class="waifu-day w-full h-64 mb-4">
     Waifu of the Day - Last 7 Days
   </div>
 </template>

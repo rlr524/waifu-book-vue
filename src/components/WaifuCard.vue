@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-xs h-full rounded overflow-hidden shadow-lg">
+  <div class="max-w-xs h-full rounded overflow-hidden shadow-lg ml-2 mr-2">
     <img
       src="./img/100001_profile.png"
       alt="Waifu Card Profile"

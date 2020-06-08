@@ -1,9 +1,13 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <Header />
-    <MyWaifus />
-    <WaifuDay />
-    <WaifuTop />
+    <main class="main-layout">
+      <section class="container-wide mx-auto mt-10 lg:mt-12 xl:mt-14">
+        <MyWaifus />
+        <WaifuDay />
+        <WaifuTop />
+      </section>
+    </main>
     <Footer />
   </div>
 </template>
@@ -38,10 +42,12 @@ white: ffffff */
   font-family: "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f9f6f7;
-  text-align: center;
   color: #2c3e50;
-  margin: 2rem auto;
+}
+
+.main-layout {
+  width: 85%;
+  margin: auto;
 }
 
 /* custom global styles */
