@@ -9,7 +9,9 @@
           class="mr-4 py-6 h-full w-16 flex flex-col justify-between items-center rounded hover:shadow-dark hover-transition -bg-color-main text-white hover:-bg-color-main-darker"
         >
           <div class="flex flex-col items-center">
-            <h3 class="font-light">My Waifus</h3>
+            <span class="font-light -my-waifus-header">
+              My Waifus
+            </span>
           </div>
         </a>
       </li>
@@ -53,11 +55,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.my-waifus-header {
+.-my-waifus-header {
   font-size: 2rem;
   text-transform: uppercase;
-  writing-mode: vertical-rl;
   vertical-align: middle;
   text-orientation: upright;
+  padding-right: 18.95rem;
+  position: absolute;
+  transform: rotate(270deg);
 }
 </style>
