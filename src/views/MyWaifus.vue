@@ -18,27 +18,11 @@
       <li
         class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
       >
-        <WaifuCard />
-      </li>
-      <li
-        class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
-      >
-        <WaifuCard />
-      </li>
-      <li
-        class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
-      >
-        <WaifuCard />
-      </li>
-      <li
-        class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
-      >
-        <WaifuCard />
-      </li>
-      <li
-        class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
-      >
-        <WaifuCard />
+        <WaifuCard
+          v-for="waifu in waifu.waifus"
+          :key="waifu.id"
+          :waifu="waifu"
+        />
       </li>
     </ul>
   </div>
@@ -46,6 +30,7 @@
 
 <script>
 import WaifuCard from "@/components/WaifuCard.vue";
+
 export default {
   name: "MyWaifus",
   components: {
