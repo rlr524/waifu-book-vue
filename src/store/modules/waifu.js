@@ -1,4 +1,4 @@
-import DataService from "@/services/DataService.js";
+// import DataService from "@/services/DataService.js";
 
 export const namespaced = true;
 
