@@ -18,11 +18,7 @@
       <li
         class="flex flex-col justify-end font-body relative rounded mr-5 text-xs"
       >
-        <WaifuCard
-          v-for="waifu in waifu.waifus"
-          :key="waifu.id"
-          :waifu="waifu"
-        />
+        <WaifuCard />
       </li>
     </ul>
   </div>

@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <main class="main-layout">
-      <section class="container-wide mx-auto mt-10 lg:mt-12 xl:mt-14">
+      <section class="container-wide mx-auto mt-10 mb-10 lg:mt-12 xl:mt-14">
         <MyWaifus />
         <WaifuDay />
         <WaifuTop />
