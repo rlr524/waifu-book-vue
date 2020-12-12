@@ -57,8 +57,8 @@ white: ffffff */
 .-bg-color-off-orange {
   background-color: #f9f6f7;
 }
-.-font-bold {
-  font-weight: 700;
+.-bg-color-light-main {
+  background-color: #ffe8d6;
 }
 .-group-height {
   height: 24rem;

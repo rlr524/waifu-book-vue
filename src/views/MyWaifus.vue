@@ -5,16 +5,16 @@
     >
       <li>
         <a
-          href="#"
-          class="mr-4 py-6 h-full w-16 flex flex-col justify-between items-center rounded hover:shadow-dark hover-transition bg-blue text-white hover:bg-orange-darker"
+          href="#" 
+          class="mr-4 py-6 h-full w-14 flex flex-col justify-center rounded hover:shadow-dark hover-transition -bg-color-main hover:-bg-color-light-main" 
           aria-label="View my waifus"
         >
-          <div flex flex-col items-center>
-            <h3 class="font-light">
+          <aside class="transform -rotate-90">
+            <h3 class="uppercase text-xl text-white font-bold">
               My Waifus
             </h3>
-          </div>
-          </a>
+          </aside>
+        </a>
       </li>
       <li
         class="flex flex-col font-body relative rounded mr-5 text-xs"
