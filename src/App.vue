@@ -1,32 +1,26 @@
 <template>
   <div id="app">
     <Header />
-    <main class="main-layout">
-      <section class="container-wide mx-auto mt-10 mb-10 lg:mt-12 xl:mt-14">
-        <MyWaifus />
-        <WaifuDay />
-        <WaifuTop />
-      </section>
-    </main>
+    <div class="container">
+      <waifu-section section-title="Waifu of the day" />
+      <waifu-section section-title="Top waifus" />
+      <waifu-section section-title="My waifus" />
+    </div>
     <Footer />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header";
-import MyWaifus from "@/views/MyWaifus.vue";
-import WaifuDay from "@/views/WaifuDay.vue";
-import WaifuTop from "@/views/WaifuTop.vue";
+import WaifuSection from "@/views/WaifuSection.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    MyWaifus,
-    WaifuDay,
-    WaifuTop,
-    Footer
+    WaifuSection,
+    Footer,
   }
 };
 </script>
@@ -45,11 +39,6 @@ white: ffffff */
   color: #2c3e50;
 }
 
-.main-layout {
-  width: 85%;
-  margin: auto;
-}
-
 /* custom global styles */
 .-bg-color-main {
   background-color: #ff971d;
@@ -59,9 +48,6 @@ white: ffffff */
 }
 .-bg-color-light-main {
   background-color: #ffe8d6;
-}
-.-group-height {
-  height: 24rem;
 }
 
 @media (max-width: 700px) {

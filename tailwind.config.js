@@ -2,7 +2,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      width: "90%"
+      width: "95%"
     },
     extend: {}
   },
