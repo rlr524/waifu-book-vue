@@ -6,7 +6,7 @@
     <div class="block">
               <a
           href="#" 
-          class="block mr-2 h-full rounded hover:shadow-dark hover-transition -bg-color-main hover:-bg-color-light-main" 
+          class="block mr-2 h-full rounded -bg-color-main hover:opacity-90 hover:shadow" 
           aria-label="View my waifus"
         >
           <h3 class="uppercase text-3xl text-white font-bold px-2 py-2">
@@ -16,7 +16,7 @@
     </div>
       <ul class="flex justify-between scrollbar overflow-x-auto xxl-no-scrollbar pt-4 pb-4">
       <li
-        class="flex flex-row font-body relative rounded mr-5 text-xs"
+        class="flex flex-row font-body relative rounded mr-5 text-xs hover:shadow"
         :v-for="(card, index) in cards" key="index"
       >
         <waifu-card />
