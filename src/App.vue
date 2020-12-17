@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <Header />
+    <app-header />
     <div class="container">
-      <waifu-section section-title="Waifu of the day" />
-      <waifu-section section-title="Top waifus" />
-      <waifu-section section-title="My waifus" />
+      <app-waifu-section :section-title="'Waifu of the day'" />
+      <app-waifu-section :section-title="'Top waifus'" />
+      <app-waifu-section :section-title="'My waifus'" />
     </div>
-    <Footer />
+    <app-footer />
   </div>
 </template>
 
@@ -18,9 +18,9 @@ import Footer from "@/components/Footer.vue";
 export default {
   name: "App",
   components: {
-    Header,
-    WaifuSection,
-    Footer,
+    appHeader: Header,
+    appWaifuSection: WaifuSection,
+    appFooter: Footer,
   }
 };
 </script>

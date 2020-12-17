@@ -1,34 +1,28 @@
 <template>
   <div class="max-w-xs h-full rounded overflow-hidden shadow-lg ml-2 mr-2">
     <img
-      src="./img/100001_profile.png"
+      :src="resolveImageURL(waifuCardProfileImage)"
       alt="Waifu Card Profile"
       class="-card-img-size"
     />
-    <div class="px-6 py-4">
+    <div class="px-6 py-2">
+      <div class="font-bold text-xs text-center">
+        <p class="text-gray-700">
+          {{ waifuCardProfileName }}
+        </p>
+      </div>
+    </div>
+    <div class="px-6 py-2">
       <div class="font-bold text-xs mb-2">
         <p class="text-gray-700">
-          Akane Tsunemori (常守 朱 Tsunemori Akane) is the main heroine and
-          point-of-view character in Psycho-Pass, the main protagonist in
-          Psycho-Pass 2 and she serves as a behind-the-scenes force in
-          Psycho-Pass 3.
+          {{ waifuCardProfileSummary }}
         </p>
       </div>
       <div class="px-6 py-4">
-        <span
+        <span v-for="(tag, index) in waifuCardProfileTags" :key="index"
           class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr2"
         >
-          #psychological thriller
-        </span>
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr2"
-        >
-          #crime
-        </span>
-        <span
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr2"
-        >
-          #cyberpunk
+        {{ tag }}
         </span>
       </div>
     </div>
@@ -37,7 +31,31 @@
 
 <script>
 export default {
-  name: "WaifuCard"
+  name: "WaifuCard",
+  props: {
+    waifuCardProfileImage: {
+      type: String,
+      default: "yukino_default_waifu.png",
+    },
+    waifuCardProfileName: {
+      type: String,
+      default: "Your Waifu's Name",
+    },
+    waifuCardProfileSummary: {
+      type: String,
+      default: "Your Waifu's profile information would go here if you had a Waifu. This would be information about your Waifu's shows, manga, exploits, and overall reasons for superior waifu status.",
+    },
+    waifuCardProfileTags: {
+      type: Array,
+      default: () => ["tag1", "tag2", "tag3"],
+    }
+  },
+  methods: {
+    resolveImageURL: function(path) {
+      let images = require.context("../img/", false, /\.png$|\.jpg$/)
+      return images("./"+path)
+    }
+  }
 };
 </script>
 
