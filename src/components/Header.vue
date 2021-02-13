@@ -1,9 +1,9 @@
 <template>
-  <!-- TODO: [WAIF-8] Make the navbar responsive with TW -->
+  <!-- TODO: Make the navbar responsive with TW -->
   <nav class="header flex mb-4 items-center h-32 -bg-color-main">
     <div class="flex items-center w-1/3">
       <img
-        src="./img/site-logo-192x192.png"
+        src="../img/site-logo-192x192.png"
         alt="Site Logo"
         class="h-16 w-16 ml-4 mr-2"
       />

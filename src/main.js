@@ -1,6 +1,6 @@
 import Vue from "vue";
 import App from "./App.vue";
-import router from "./router.js";
+import router from "./router/index.js";
 import store from "@/store/index.js";
 import upperFirst from "lodash/upperFirst";
 import camelCase from "lodash/camelCase";
@@ -11,28 +11,28 @@ import "./assets/main.css";
 Vue.use(Vuelidate);
 
 const requireComponent = require.context(
-  "./components",
-  false,
-  /Base[A-Z]\w+\.(vue|js)$/
+	"./components",
+	false,
+	/Base[A-Z]\w+\.(vue|js)$/
 );
 
 requireComponent.keys().forEach(function(fileName) {
-  const componentConfig = requireComponent(fileName);
-  const componentName = upperFirst(
-    camelCase(
-      fileName
-        .split("/")
-        .pop()
-        .replace(/\.\w+$/, "")
-    )
-  );
-  Vue.component(componentName, componentConfig.default || componentConfig);
+	const componentConfig = requireComponent(fileName);
+	const componentName = upperFirst(
+		camelCase(
+			fileName
+				.split("/")
+				.pop()
+				.replace(/\.\w+$/, "")
+		)
+	);
+	Vue.component(componentName, componentConfig.default || componentConfig);
 });
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  render: (h) => h(App)
+	router,
+	store,
+	render: (h) => h(App),
 }).$mount("#app");

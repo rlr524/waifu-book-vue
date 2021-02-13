@@ -11,10 +11,13 @@
     "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
   },
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.4",
+    "fsevents": "^2.3.2",
     "lodash": "^4.17.19",
     "postcss": "^7.0.35",
+    "qs": "^6.5.2",
     "vue": "^2.6.11",
     "vue-router": "^3.3.4",
     "vuelidate": "^0.7.5",
