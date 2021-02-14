@@ -1,11 +1,14 @@
-export const namespaced = true;
+// import api from "../../api/DataService";
 
 export const state = {
 	waifus: [],
-	waifu: {},
 };
 
-export const mutations = {
+const getters = {
+	getWaifus: (state) => state.waifus,
+};
+
+const mutations = {
 	ADD_WAIFU(state, waifu) {
 		state.waifus.push(waifu);
 	},
@@ -17,4 +20,11 @@ export const mutations = {
 	},
 };
 
-export const actions = {};
+const actions = {};
+
+export default {
+	state,
+	getters,
+	actions,
+	mutations,
+};
