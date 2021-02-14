@@ -21,44 +21,26 @@
         class="flex flex-row font-body relative rounded mr-5 text-xs hover:shadow"
       >
         <app-waifu-card />
-        <app-waifu-card
-          :waifu-card-profile-image="'100001_profile.png'"
-          :waifu-card-profile-name="'Akane Tsunemori'"
-          :waifu-card-profile-summary="'Akane Tsunemori (常守 朱 Tsunemori Akane) is the main heroine and point-of-view character in Psycho-Pass, the main protagonist in Psycho-Pass 2 and she serves as a behind-the-scenes force in Psycho-Pass 3.'"
-          :waifu-card-profile-tags="[
-            'psychological thriller',
-            'cyberpunk',
-            'crime',
-          ]"
-        />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import { mapGetters } from "vuex";
 import WaifuCard from "@/components/WaifuCard.vue";
 
 export default {
   name: "WaifuSection",
   data: function () {
-    return {
-      cards: [],
-    };
+    return {};
   },
   components: {
     appWaifuCard: WaifuCard,
   },
-  computed: {
-    ...mapGetters(["getWaifus"]),
-  },
   props: {
     sectionTitle: String,
   },
-  created() {
-    console.log(this.getWaifus);
-  },
+  created() {},
 };
 </script>
 

@@ -1,4 +1,4 @@
-// import api from "../../api/DataService";
+import api from "../../api/DataService";
 
 export const state = {
 	waifus: [],
@@ -9,18 +9,17 @@ const getters = {
 };
 
 const mutations = {
-	ADD_WAIFU(state, waifu) {
-		state.waifus.push(waifu);
-	},
-	SET_WAIFUS(state, waifus) {
+	setWaifus: (state, waifus) => {
 		state.waifus = waifus;
-	},
-	SET_WAIFU(state, waifu) {
-		state.waifu = waifu;
 	},
 };
 
-const actions = {};
+const actions = {
+	useWaifus: async ({ commit }) => {
+		const response = await api.fetchAllWaifus();
+		commit("setWaifus", response.data);
+	},
+};
 
 export default {
 	state,
