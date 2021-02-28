@@ -20,7 +20,8 @@
       <li
         class="flex flex-row font-body relative rounded mr-5 text-xs hover:shadow"
       >
-        <app-waifu-card v-for="waifu in getWaifus" :key="waifu.waifuId" />
+        <app-waifu-card v-for="waifu in getWaifus" :key="waifu.waifuId">
+        </app-waifu-card>
       </li>
     </ul>
   </div>
@@ -34,6 +35,12 @@ export default {
   name: "WaifuSection",
   data: function () {
     return {};
+  },
+  props: {
+    sectionTitle: {
+      type: String,
+      required: false,
+    },
   },
   components: {
     appWaifuCard: WaifuCard,

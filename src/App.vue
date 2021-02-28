@@ -2,9 +2,7 @@
   <div id="app">
     <app-header />
     <div class="container">
-      <app-waifu-section :section-title="'Waifu of the day'" />
-      <app-waifu-section :section-title="'Top waifus'" />
-      <app-waifu-section :section-title="'My waifus'" />
+      <router-view />
     </div>
     <app-footer />
   </div>
@@ -12,16 +10,14 @@
 
 <script>
 import Header from "@/components/Header";
-import WaifuSection from "@/views/WaifuSection.vue";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/Footer";
 
 export default {
   name: "App",
   components: {
     appHeader: Header,
-    appWaifuSection: WaifuSection,
     appFooter: Footer,
-  }
+  },
 };
 </script>
 
