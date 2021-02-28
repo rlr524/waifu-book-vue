@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const ROOT_URL = "http://localhost:3000/";
+const ROOT_URL = "https://polar-refuge-05452.herokuapp.com/";
 
 export default {
 	fetchAllWaifus() {

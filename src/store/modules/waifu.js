@@ -9,7 +9,7 @@ const getters = {
 };
 
 const mutations = {
-	setWaifus: (state, waifus) => {
+	SET_WAIFUS: (state, waifus) => {
 		state.waifus = waifus;
 	},
 };
@@ -17,7 +17,7 @@ const mutations = {
 const actions = {
 	useWaifus: async ({ commit }) => {
 		const response = await api.fetchAllWaifus();
-		commit("setWaifus", response.data);
+		commit("SET_WAIFUS", response.data);
 	},
 };
 

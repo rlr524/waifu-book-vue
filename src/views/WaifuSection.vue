@@ -20,7 +20,7 @@
       <li
         class="flex flex-row font-body relative rounded mr-5 text-xs hover:shadow"
       >
-        <app-waifu-card />
+        <app-waifu-card v-for="waifu in getWaifus" :key="waifu.waifuId" />
       </li>
     </ul>
   </div>
@@ -28,6 +28,7 @@
 
 <script>
 import WaifuCard from "@/components/WaifuCard.vue";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "WaifuSection",
@@ -37,10 +38,19 @@ export default {
   components: {
     appWaifuCard: WaifuCard,
   },
-  props: {
-    sectionTitle: String,
+  methods: {
+    ...mapActions(["useWaifus"]),
+    resolveImageURL: function (path) {
+      let images = require.context("../img/", false, /\.png$|\.jpg$/);
+      return images("./" + path);
+    },
   },
-  created() {},
+  computed: {
+    ...mapGetters(["getWaifus"]),
+  },
+  created() {
+    this.useWaifus();
+  },
 };
 </script>
 
