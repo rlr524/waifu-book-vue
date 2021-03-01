@@ -1,5 +1,5 @@
 <template>
-  <div class="my-waifu pl-2">
+  <div id="top-waifu" class="pl-2">
     <!-- <ul
       class="flex justify-between pt-4 pb-4 scrollbar overflow-x-auto xxl-no-scrollbar"
     > -->
@@ -14,21 +14,23 @@
         </h3>
       </a>
     </div>
-    <ul
+    <div
       class="flex justify-between scrollbar overflow-x-auto xxl-no-scrollbar pt-4 pb-4"
     >
-      <li
-        class="flex flex-row font-body relative rounded mr-5 text-xs hover:shadow"
-      >
-        <app-waifu-card v-for="waifu in getWaifus" :key="waifu.waifuId">
-        </app-waifu-card>
-      </li>
-    </ul>
+      <div class="flex flex-row font-body relative rounded mr-5 text-xs">
+        <base-waifu-card
+          v-for="(waifuId, fullNameEn, profileImageURL) in getWaifus"
+          :key="waifuId"
+          :fullNameEn="fullNameEn"
+          :profileImageURL="profileImageURL"
+        >
+        </base-waifu-card>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import WaifuCard from "@/components/WaifuCard.vue";
 import { mapActions, mapGetters } from "vuex";
 
 export default {
@@ -42,9 +44,7 @@ export default {
       required: false,
     },
   },
-  components: {
-    appWaifuCard: WaifuCard,
-  },
+  components: {},
   methods: {
     ...mapActions(["useWaifus"]),
     resolveImageURL: function (path) {
@@ -62,4 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+#top-waifu {
+  max-height: 35rem;
+}
 </style>
