@@ -24,6 +24,7 @@
           :animeMainSeries="waifu.animeMainSeries"
           :fullNameEn="waifu.fullNameEn"
           :profileImgURL="waifu.profileImgURL"
+          :waifuCardProfileTags="waifu.tags"
         >
         </base-waifu-card>
       </div>

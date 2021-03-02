@@ -19,9 +19,9 @@
         <span
           v-for="(tag, index) in waifuCardProfileTags"
           :key="index"
-          class="inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr2 text-center"
+          class="flex inline-block bg-gray-200 rounded-full px-3 py-1 text-xs font-semibold text-gray-700 mr2"
         >
-          {{ tag }}
+          {{ waifuCardProfileTags[index] }}
         </span>
       </div>
     </div>
