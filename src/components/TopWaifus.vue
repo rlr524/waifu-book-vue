@@ -19,10 +19,11 @@
     >
       <div class="flex flex-row font-body relative rounded mr-5 text-xs">
         <base-waifu-card
-          v-for="(waifuId, fullNameEn, profileImageURL) in getWaifus"
-          :key="waifuId"
-          :fullNameEn="fullNameEn"
-          :profileImageURL="profileImageURL"
+          v-for="waifu in getWaifus"
+          :key="waifu.waifuId"
+          :animeMainSeries="waifu.animeMainSeries"
+          :fullNameEn="waifu.fullNameEn"
+          :profileImgURL="waifu.profileImgURL"
         >
         </base-waifu-card>
       </div>

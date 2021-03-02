@@ -3,11 +3,7 @@
     id="base-waifu-card"
     class="max-w-xs rounded overflow-hidden shadow-lg ml-2 mr-2"
   >
-    <img
-      :src="profileImageURL"
-      alt="Waifu Card Profile"
-      class="-card-img-size"
-    />
+    <img :src="profileImgURL" alt="Waifu Card Profile" class="-card-img-size" />
     <div class="px-6 py-2">
       <div class="font-bold text-xs mb-2 text-center">
         <p class="text-gray-700">
@@ -38,23 +34,19 @@ export default {
   props: {
     fullNameEn: {
       type: String,
-      required: true,
       default: "Your Waifu",
     },
-    profileImageURL: {
+    profileImgURL: {
       type: String,
-      required: true,
       default:
         "https://res.cloudinary.com/emiya-consulting/image/upload/v1614639926/waifu_logob_fpttxf.png",
     },
     animeMainSeries: {
       type: String,
-      required: true,
       default: "Edit your waifu to add a series or manga",
     },
     occupation: {
       type: String,
-      required: true,
       default: "Professional Waifu",
     },
     waifuCardProfileTags: {
@@ -75,6 +67,6 @@ export default {
 }
 .-card-img-size {
   height: 45%;
-  width: 100%;
+  width: 20rem;
 }
 </style>
