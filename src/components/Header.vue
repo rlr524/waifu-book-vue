@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <!-- TODO: Make the navbar responsive with TW -->
   <nav class="header flex mb-4 items-center h-32 -bg-color-main">
     <div class="flex items-center w-1/3">
@@ -52,7 +52,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Header",
+};
 </script>
 
 <style lang="scss" scoped>

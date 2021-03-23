@@ -36,7 +36,7 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "WaifuSection",
+  name: "TopWaifus",
   data: function () {
     return {};
   },

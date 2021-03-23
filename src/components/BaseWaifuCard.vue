@@ -30,7 +30,7 @@
 
 <script>
 export default {
-  name: "WaifuCard",
+  name: "BaseWaifuCard",
   props: {
     fullNameEn: {
       type: String,
