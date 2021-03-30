@@ -1,5 +1,5 @@
 <template>
-  <div id="top-waifu" class="pl-2">
+  <div id="new-waifu" class="pl-2">
     <!-- <ul
       class="flex justify-between pt-4 pb-4 scrollbar overflow-x-auto xxl-no-scrollbar"
     > -->
@@ -7,7 +7,7 @@
       <a
         href="#"
         class="block mr-2 h-full rounded -bg-color-main hover:opacity-90 hover:shadow"
-        aria-label="View the top waifus"
+        aria-label="View the newest waifus"
       >
         <h3 class="uppercase text-3xl text-white font-bold px-2 py-2">
           {{ sectionTitle }}
@@ -36,7 +36,7 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "TopWaifus",
+  name: "NewWaifus",
   data: function () {
     return {};
   },
