@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const ROOT_URL = "https://polar-refuge-05452.herokuapp.com/";
+const ROOT_URL =
+	"https://us-central1-emiya-firebase-waifu-api.cloudfunctions.net/app/";
 
 export default {
 	fetchAllWaifus() {
