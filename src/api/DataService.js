@@ -1,7 +1,6 @@
 import axios from "axios";
 
-const ROOT_URL =
-	"https://us-central1-emiya-firebase-waifu-api.cloudfunctions.net/app/";
+const ROOT_URL = "https://emiya-firebase-waifu-api.web.app/";
 
 export default {
 	fetchAllWaifus() {
