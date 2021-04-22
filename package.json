@@ -3,14 +3,15 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
+		"serve": "npm run watch:css && vue-cli-service serve",
+		"build": "npm run build:css && vue-cli-service build",
 		"lint": "vue-cli-service lint",
 		"build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
 		"watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
 		"test:unit": "vue-cli-service test:unit"
 	},
 	"dependencies": {
+		"@fullhuman/postcss-purgecss": "^4.0.0",
 		"axios": "^0.21.1",
 		"core-js": "^3.6.4",
 		"fsevents": "^2.3.2",
@@ -23,10 +24,15 @@
 		"websocket-extensions": "^0.1.4"
 	},
 	"devDependencies": {
+		"@tailwindcss/postcss7-compat": "^2.1.0",
 		"@vue/cli-plugin-babel": "~4.3.0",
 		"@vue/cli-service": "~4.3.0",
+		"autoprefixer": "^9.8.6",
+		"postcss": "^7.0.35",
+		"postcss-cli": "^7.1.2",
 		"sass": "^1.32.11",
 		"sass-loader": "^10.1.1",
+		"tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.0",
 		"vue-template-compiler": "^2.6.11"
 	},
 	"browserslist": [
