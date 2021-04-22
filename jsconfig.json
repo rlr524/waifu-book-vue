@@ -3,5 +3,8 @@
 		"module": "commonjs",
 		"target": "es2020"
 	},
+	"typeAcquisition": {
+		"exclude": ["dotenv"]
+	},
 	"include": ["src"]
 }

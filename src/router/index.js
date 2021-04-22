@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import JestTest from "../components/JestTest.vue";
 
 Vue.use(VueRouter);
 
@@ -12,12 +11,7 @@ const routes = [
 		component: Home,
 		props: true,
 	},
-	// TODO: Change this to the real login component
-	{
-		path: "/login",
-		name: "login",
-		component: JestTest,
-	},
+	// TODO: Add the real login component
 ];
 
 const router = new VueRouter({
