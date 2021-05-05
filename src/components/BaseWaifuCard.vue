@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="base-waifu-card"
-    class="max-w-xs rounded overflow-hidden shadow-lg ml-2 mr-2"
-  >
+  <div id="base-waifu-card" class="rounded overflow-hidden shadow-lg ml-2 mr-2">
     <img :src="profileImgURL" alt="Waifu Card Profile" class="-card-img-size" />
     <div class="px-6 py-2">
       <div class="font-bold text-xs mb-2 text-center">
@@ -64,9 +61,10 @@ export default {
 <style lang="scss" scoped>
 #base-waifu-card {
   max-height: 25rem;
+  width: 16rem;
 }
 .-card-img-size {
   height: 45%;
-  width: 20rem;
+  width: 100%;
 }
 </style>

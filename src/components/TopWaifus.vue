@@ -1,8 +1,5 @@
 <template>
   <div id="top-waifu" class="pl-2">
-    <!-- <ul
-      class="flex justify-between pt-4 pb-4 scrollbar overflow-x-auto xxl-no-scrollbar"
-    > -->
     <div class="block">
       <a
         href="#"
@@ -14,9 +11,7 @@
         </h3>
       </a>
     </div>
-    <div
-      class="flex justify-between scrollbar overflow-x-auto xxl-no-scrollbar pt-4 pb-4"
-    >
+    <div class="flex justify-between scrollbar overflow-x-auto pt-4 pb-4">
       <div class="flex flex-row font-body relative rounded mr-5 text-xs">
         <base-waifu-card
           v-for="waifu in getWaifus"
