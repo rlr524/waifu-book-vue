@@ -6,4 +6,7 @@ export default {
 	fetchAllWaifus() {
 		return axios.get(`${ROOT_URL}waifus/`);
 	},
+	fetchUser() {
+		return axios.get(`${ROOT_URL}users/`);
+	},
 };
