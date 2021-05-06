@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import CreateWaifu from "../views/CreateWaifu.vue";
 
 Vue.use(VueRouter);
 
@@ -10,6 +11,11 @@ const routes = [
 		name: "home",
 		component: Home,
 		props: true,
+	},
+	{
+		path: "/create",
+		name: "create",
+		component: CreateWaifu,
 	},
 	// TODO: Add the real login component
 ];

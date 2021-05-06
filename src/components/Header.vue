@@ -25,24 +25,34 @@
         </div>
       </form>
     </div>
-    <div class="flex w-1/3">
+    <div class="flex w-1/3 mr-4">
       <div
         class="header-links text-white text-xl sm:flex-grow sm:flex sm:justify-end hidden"
       >
-        <a
-          href="/"
+        <router-link
+          to="/"
           class="block mt-4 sm:inline-block sm:mt-0 hover:shadow-inner mr-4"
         >
           Home
-        </a>
-        <a
-          href="/login"
+        </router-link>
+        <router-link
+          to="login"
           class="block mt-4 sm:inline-block sm:mt-0 hover:shadow-inner mr-4"
+          v-if="!isLoggedIn"
         >
           Login
-        </a>
+        </router-link>
+        <router-link
+          to="create"
+          v-else
+          href="/create"
+          class="material-icons md-light md-36 cursor-pointer"
+        >
+          add_circle
+        </router-link>
       </div>
     </div>
+
     <div class="menu-vertical-responsive">
       <i class="material-icons mt-2 md-light sm:hidden cursor-pointer static">
         more_vert
@@ -54,11 +64,19 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      isLoggedIn: true,
+    };
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .material-icons.md-light {
   color: rgba(255, 255, 255, 1);
+}
+.material-icons.md-36 {
+  font-size: 36px;
 }
 </style>
